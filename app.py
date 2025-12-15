@@ -57,9 +57,6 @@ with st.sidebar:
         input_city = st.text_input('City', 'Toronto')
         input_country = st.text_input('Country', 'Canada')
 
-        #doesn't work yet
-        drive = st.checkbox("I'm driving there.") #true or false
-
         findmeabike = st.button('Find me a bike!', type='primary')
 
         #when user clicks on the above button
@@ -116,7 +113,7 @@ if bike_method == "Rent" and findmeabike == False:
 
     folium_static(m)
 
-if bike_method == "Return" and findmeabike == False:
+if bike_method == "Return" and findmeadock == False:
     #map created with folium
     center = [43.65306613746548, -79.38815311015] #coordinates for toronto
     m = folium.Map(location=center, zoom_start=12, tiles='cartodbpositron') #map with grey background
@@ -192,7 +189,7 @@ if findmeabike:
             
             #adding a new metric to column 3
             with col3:
-                st.metric(label=":green[Travel Time (min)]", value=duration)  # Display travel time
+                st.metric(label=":green[Driving time to station (min)]", value=duration)  # Display travel time
 
 #logic for finding a dock
 if findmeadock:
@@ -244,4 +241,4 @@ if findmeadock:
             folium_static(m1) #display the map in the Streamlit app
             
             with col3:
-                st.metric(label=":green[Travel Time (min)]", value=duration)  # Display travel time
+                st.metric(label=":green[Driving time to station (min)]", value=duration)  # Display travel time
