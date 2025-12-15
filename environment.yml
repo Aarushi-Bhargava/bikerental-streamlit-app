@@ -1,0 +1,29 @@
+name: bikerental_streamlit
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+
+  # Core data
+  - numpy
+  - pandas
+
+  # Geo stack — MUST be conda, not pip
+  - geopandas
+  - shapely
+  - pyproj
+  - fiona
+
+  # Mapping
+  - folium
+
+  # App
+  - streamlit
+
+  # Jupyter
+  - ipykernel
+
+  - pip:
+      - streamlit-folium
+      - geopy

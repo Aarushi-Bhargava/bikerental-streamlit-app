@@ -1,0 +1,14 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+env/
+*.env
+*.venv
+
+# Ignore system files
+.DS_Store
+
+# Conda installer
+.Miniconda3-latest-MacOSX-x86_64.sh
