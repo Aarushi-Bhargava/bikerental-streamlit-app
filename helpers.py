@@ -1,7 +1,7 @@
 import urllib #to open data from a website (url)
 import json #to read json data
 import pandas as pd #to work with tables (rows and columns)
-import folium #for creating interactive maps
+
 import datetime as dt #to work with dates & times
 from geopy.distance import geodesic #for calculating distances between coordinates
 from geopy.geocoders import Nominatim #for geocoding addresses (convert an address to lat/long)
