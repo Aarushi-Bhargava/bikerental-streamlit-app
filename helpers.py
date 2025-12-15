@@ -39,7 +39,7 @@ def query_station_status(url):
 
     df = df.dropna(subset=['last_reported']) #drop rows where last_reported is missing (NaN) before converting below
 
-    df.last_reported = df.last_reported.map(lambda x: dt.datetime.utcfromtimestamp(x)) #convert unix timestamp returend by API (seconds since 1970) to human readable date time #what api?
+    df.last_reported = df.last_reported.map(lambda x: dt.datetime.utcfromtimestamp(x)) #convert unix timestamp returend by API (seconds since 1970) to human readable date time
 
     df['time'] = data['last_updated'] #add the last updated time to the dataframe
     df.time = df.time.map(lambda x: dt.datetime.utcfromtimestamp(x)) #convert unix timestamp to human readable date time
